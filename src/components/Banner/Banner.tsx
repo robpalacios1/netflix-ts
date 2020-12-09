@@ -18,6 +18,7 @@ const Banner : React.SFC<BannerProps> = () => {
             const request_= await instance_netflix.get(request.fetchNetflixOriginals);
             const number = Math.floor(Math.random() * request_.data.results.length - 1);
             const selected_movie = request_.data.results[number];
+            console.log(number);
             setMovie(selected_movie);
         }
 
@@ -37,18 +38,18 @@ const Banner : React.SFC<BannerProps> = () => {
         }}
       >
         <div className="banner_contents">
-          <h1 className="banner_title">
-            {movie?.title || movie?.name || movie?.original_name}
-          </h1>
+            <h1 className="banner_title">
+                {movie?.title || movie?.name || movie?.original_name}
+            </h1>
   
-          <div className="banner_buttons">
-            <button className="banner_button">Play</button>
-            <button className="banner_button">My List</button>
-          </div>
-          <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
+            <div className="banner_buttons">
+                <button className="banner_button">Play</button>
+                <button className="banner_button">My List</button>
+            </div>
+
+            <h1 className="banner_description">{truncate(movie?.overview, 200)}</h1>
         </div>
   
-        <div className="banner--fadeBottom" />
       </header>
     );
 }
