@@ -3,13 +3,13 @@ import './App.css';
 import Row from './components/Row/Row';
 import {request} from './config';
 import Banner from './components/Banner/Banner';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
   return (
     <div className="app">
-      {/*Nav */}
-      {/*Bannner*/}
-      {/*<h1>soy la monda</h1>*/}
+      {/** NavBar */}
+      <NavBar/>
       <Banner/>
       <Row
         title="NETFLIX ORIGINALS"

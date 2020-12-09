@@ -16,4 +16,5 @@ html {
 
 .app {
   background-color: #111;
+  position: relative;
 }
