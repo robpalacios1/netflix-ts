@@ -46,3 +46,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Author :book:
 Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1)
 Hector Vinicio [Twitter](https://twitter.com/CurlyGalactic) | [GitHub](https://github.com/hectorlopezv)
+
+Pair Programming using Visual Studio live Sharing!
