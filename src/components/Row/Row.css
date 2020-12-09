@@ -1,8 +1,6 @@
 .row {
-  text-align: center;
   padding: 5px;
 }
-
 .row__poster {
   width: 100%;
   object-fit: contain;
@@ -24,4 +22,8 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
+}
+
+.row__posterLarge {
+  max-height: 250px;
 }

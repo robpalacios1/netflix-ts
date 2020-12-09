@@ -5,12 +5,13 @@ import './Row.css';
 export interface RowProps {
       title: string;
       url: string;
+      isLarge: boolean;
 }
 
 const base_url = "https://image.tmdb.org/t/p/original"
 
 const Row : React.FC<RowProps> = (props) => {
-    const {url} = props;
+    const {url, isLarge} = props;
 
     const [movies, setMovies] = useState<any[]>([]);
     useEffect(() => { //fetching data can be donde in redux
@@ -34,8 +35,8 @@ const Row : React.FC<RowProps> = (props) => {
                     movies.map((movie: any) => {
                         return <img 
                         key={movie.id}
-                        className="row__poster" 
-                        src={`${base_url}${movie.poster_path}`} 
+                        className={`row__poster ${isLarge && "row__posterLarge"}`}
+                        src={`${base_url}${isLarge ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.title}></img>
                     })
                 }

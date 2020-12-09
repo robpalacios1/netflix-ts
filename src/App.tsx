@@ -6,19 +6,42 @@ import {request} from './config';
 const App = () => {
   return (
     <div className="app">
-      
-      
-    
-      <Row title="NETFLIX ORIGINALS" url={request.fetchNetflixOriginals} />
-      <Row title="Trending Now" url={request.fetchTrending} />
-      <Row title="Top Rated" url={request.fetchTopRated} />
-      <Row title="Action Movies" url={request.fetchActionMovies} />
-      <Row title="Comedy Movies" url={request.fetchComedyMovies} />
-      <Row title="Romance Movies" url={request.fetchRomanceMovie} />
-      <Row title="Documentaries" url={request.fetchDocumentaries} />
-
-      
-
+      <h1>soy la monda</h1>
+      <Row
+        title="NETFLIX ORIGINALS"
+        url={request.fetchNetflixOriginals}
+        isLarge={true}
+      />
+      <Row
+        title="Trending Now"
+        url={request.fetchTrending}
+        isLarge={false}
+      />
+      <Row
+        title="Top Rated"
+        url={request.fetchTopRated}
+        isLarge={false}
+      />
+      <Row
+        title="Action Movies"
+        url={request.fetchActionMovies}
+        isLarge={false}
+      />
+      <Row
+        title="Comedy Movies"
+        url={request.fetchComedyMovies}
+        isLarge={false}
+      />
+      <Row
+        title="Romance Movie"
+        url={request.fetchRomanceMovie}
+        isLarge={false}
+      />
+      <Row
+       title="Documentaries"
+        url={request.fetchDocumentaries}
+        isLarge={false}
+      />
     </div>
   );
 }
