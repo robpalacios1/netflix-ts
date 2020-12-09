@@ -1,10 +1,25 @@
 import React from 'react';
 import './App.css';
+import Row from './components/Row/Row';
+import {request} from './config';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>hello</h1>
+    <div className="app">
+      {/*
+      <Row title="NETFLIX ORIGINALS"  url={request.fetchNetflixOriginals} />
+      */}
+      
+      <Row title="Trending Now" url={request.fetchTrending} />
+      {
+       
+        //<Row title="Top Rated" url={request.fetchTopRated} />
+        //<Row title="Action Movies" url={request.fetchActionMovies} />
+        //<Row title="Comedy Movies" url={request.fetchComedyMovies} />
+      
+      }
+      
+
     </div>
   );
 }
