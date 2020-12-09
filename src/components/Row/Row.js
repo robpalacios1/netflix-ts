@@ -1,16 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import instance_netflix from '../../axios';
 import YouTube from 'react-youtube';
-import axios from 'axios';
 import movieTrailer from 'movie-trailer';
 
 import './Row.css';
-
-// export interface RowProps {
-//       title: string;
-//       url: string;
-//       isLarge: boolean;
-// }
 
 const base_url = "https://image.tmdb.org/t/p/original"
 
@@ -18,7 +11,7 @@ const base_url = "https://image.tmdb.org/t/p/original"
 
     const Row  = (props) => {
     const {url, isLarge} = props;
-   
+
     // const [movies, setMovies] = useState<any[]>([]);
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
@@ -47,7 +40,7 @@ const base_url = "https://image.tmdb.org/t/p/original"
             .then(url => {
               const Params = new URLSearchParams(new URL(url).search);
               setTrailerUrl(Params.get('v'));
-            }).catch((error) => console.log(error));        
+            }).catch((error) => console.log(error));
 
         }
     }
@@ -60,8 +53,7 @@ const base_url = "https://image.tmdb.org/t/p/original"
             <div className="row__posters">
                 {
                     movies.map((movie) => {
-                        
-                        return <img 
+                        return <img
                         key={movie.id}
                         onClick={()=> movieHandler(movie)}
                         className={`row__poster ${isLarge && "row__posterLarge"}`}
