@@ -2,11 +2,15 @@ import React from 'react';
 import './App.css';
 import Row from './components/Row/Row';
 import {request} from './config';
+import Banner from './components/Banner/Banner';
 
 const App = () => {
   return (
     <div className="app">
-      <h1>soy la monda</h1>
+      {/*Nav */}
+      {/*Bannner*/}
+      {/*<h1>soy la monda</h1>*/}
+      <Banner/>
       <Row
         title="NETFLIX ORIGINALS"
         url={request.fetchNetflixOriginals}
